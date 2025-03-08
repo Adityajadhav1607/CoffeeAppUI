@@ -1,5 +1,5 @@
+import 'package:challenge1/desc.dart';
 import 'package:challenge1/list.dart';
-import 'package:challenge1/screen1.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
@@ -108,8 +108,10 @@ class Homepage extends StatelessWidget {
                           children: [
                             Text(
                               "Good morning Walsh!",
-                              style:
-                                  TextStyle(fontSize: 20,fontWeight: FontWeight.bold, color: Colors.white),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                             Text(
                               "It’s a great day for coffee",
@@ -157,9 +159,8 @@ class Homepage extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(10))
-                  ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
                   child: Row(
                     children: [
                       Padding(
@@ -240,13 +241,13 @@ class Homepage extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Screen1()));
+                                      builder: (context) => Descpage()));
                             },
                             child: Container(
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          "${coffee![index]["img"]}"))),
+                                          "${coffee[index]["img"]}"))),
                               width: 210,
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 30),
@@ -256,7 +257,7 @@ class Homepage extends StatelessWidget {
                                     Row(
                                       children: [
                                         Text(
-                                          "${coffee![index]["name"]}",
+                                          "${coffee[index]["name"]}",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white),
@@ -273,7 +274,7 @@ class Homepage extends StatelessWidget {
                                           width: 10,
                                         ),
                                         Text(
-                                          "${coffee![index]["location"]}",
+                                          "${coffee[index]["location"]}",
                                           style: TextStyle(color: Colors.white),
                                         )
                                       ],
@@ -296,15 +297,18 @@ class Homepage extends StatelessWidget {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text(
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF0E121F)),
-                        "Popular Place"), Text(
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFFC67C4E)),
-                          "View All")],
+                      children: [
+                        Text(
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF0E121F)),
+                            "Popular Place"),
+                        Text(
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFFC67C4E)),
+                            "View All")
+                      ],
                     ),
                     SizedBox(
                       height: 10,
@@ -318,7 +322,7 @@ class Homepage extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return Column(
                               children: [
-                                Image.asset("${coffee![index]["img"]}"),
+                                Image.asset("${coffee[index]["img"]}"),
                                 SizedBox(
                                   height: 20,
                                 )
@@ -339,7 +343,7 @@ class Homepage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset("assets/Home.png"),
-            Image.asset("assets/Search.png"),
+            Image.asset("assets/Search_2.png"),
             Image.asset("assets/Gift.png"),
             Image.asset("assets/User.png"),
           ],
